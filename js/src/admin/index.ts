@@ -1,8 +1,10 @@
 import app from 'flarum/admin/app';
+import registerWidget from '../common/registerWidget';
 
 const translationPrefix = 'fof-forum-statistics-widget.admin.';
 
 app.initializers.add('fof-forum-statistics-widget', () => {
+  registerWidget(app);
   app.extensionData
     .for('fof-forum-statistics-widget')
     .registerSetting({
